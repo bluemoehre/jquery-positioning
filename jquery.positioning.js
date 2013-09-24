@@ -43,13 +43,15 @@
 					refCorrect = $this.offsetParent().offset();
 					left -= refCorrect.left;
 					top -= refCorrect.top;
+					left += $refX.get(0) == window ? window.pageXOffset : 0;
+					top += $refY.get(0) == window ? window.pageYOffset : 0;
 				}
 				$this.css({
 					position: newPos,
 					top: top,
 					left: left,
-					width: $this.innerWidth(),
-					height: $this.innerHeight()
+					width: $this.width(),
+					height: $this.height()
 				});
 			}
 		});
