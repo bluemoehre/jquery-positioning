@@ -7,7 +7,7 @@
 (function($){
 
 	/**
-	 * Center all elements on the jQuery stack to the given reference elements. (Perfect for user dialogs)
+	 * Center all elements on the jQuery stack to the given reference elements.
 	 * If only one element is given it will be used as X and Y reference.
 	 * If no element is given the reference will be the window object.
 	 *
@@ -20,7 +20,7 @@
 	 * @TODO optionally test viewport's width/height and if it is to small for displaying the whole element at once,
 	 *       enable document scrolling if possible - if not enable inner scrolling.
 	 */
-	$.fn.centerTo = function(refX, refY, pos) {
+	$.fn.centerTo = function(refX, refY) {
 		var $refX = refX ? $(refX).first() : $(window);
 		var $refY = refY ? $(refY).first() : $refX;
 		return this.each(function(){
